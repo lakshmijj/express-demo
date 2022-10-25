@@ -2,7 +2,8 @@
 # this image includes node and npm ready to use
 FROM node:14.15.3-alpine
 # Working directory be app
-WORKDIR /usr/app
+RUN mkdir -p /usr/app/client
+WORKDIR /usr/app/client
 COPY package*.json ./
 # Install dependencies
 RUN npm install
